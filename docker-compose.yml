@@ -4,14 +4,14 @@ services:
   app:
     build: 
       context: node
-    container_name: app 
+    container_name: app     
     networks:
       - node-network
     volumes:
       - ./node:/usr/src/app
     tty: true    
     depends_on: 
-      - db  
+      - db
 
   db:
     image: mysql:5.7
